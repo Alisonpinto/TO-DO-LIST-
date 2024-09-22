@@ -248,3 +248,138 @@ ul li span:hover {
         font-size: 16px;
     }
 }
+.contact-box {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    z-index: 1000;
+}
+
+
+.contact-icon {
+    background-color: #153677;
+    color: #ffffff;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.contact-icon:hover {
+    transform: scale(1.15);
+    background-color: #ff6f61;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.contact-icon i {
+    transition: color 0.3s ease;
+}
+
+.contact-icon:hover i {
+    color: #fff;
+}
+
+/* Adding hover animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.contact-icon:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+
+.task-list {
+    max-height: 300px; 
+    overflow-y: auto;   
+    padding-right: 15px;
+}
+
+
+.task-list::-webkit-scrollbar {
+    width: 12px;
+}
+
+.task-list::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;   
+    border: 3px solid #f1f1f1; 
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .text-cont {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+    }
+
+    .text-cont h2 {
+        font-size: 22px;
+    }
+
+    .box-container {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .to-do-app {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+        padding: 12px;
+    }
+
+    ul li {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    ul li span {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
